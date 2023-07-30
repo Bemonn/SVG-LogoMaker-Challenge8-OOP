@@ -4,5 +4,26 @@
   },
   "devDependencies": {
     "jest": "^29.6.2"
-  }
+  },
+  "name": "svg-logomaker-challenge8-oop",
+  "description": "Basic Logo Generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bemonn/SVG-LogoMaker-Challenge8-OOP.git"
+  },
+  "keywords": [
+    "Logo",
+    "Generator"
+  ],
+  "author": "Tristan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bemonn/SVG-LogoMaker-Challenge8-OOP/issues"
+  },
+  "homepage": "https://github.com/Bemonn/SVG-LogoMaker-Challenge8-OOP#readme"
 }
