@@ -1,3 +1,4 @@
+//Tests for jest
 const { Circle, Triangle, Square } = require('../Lib/shapes');
 
 describe("Shape tests", () => {
