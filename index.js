@@ -1,7 +1,10 @@
+//Importing required dependencies
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { Circle, Triangle, Square } = require('./Lib/shapes');
 
+//Template string for generating SVG markup
+//Takes in shape, text and textColour as arguments and injects them into the SVG template
 const svgTemplate = (shape, text, textColour) => `
     <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
         ${shape.render()}
@@ -9,6 +12,7 @@ const svgTemplate = (shape, text, textColour) => `
     </svg>
 `;
 
+//Array of questions for the user
 const questions = [
     {
       type: 'input',
@@ -43,6 +47,7 @@ const questions = [
       },
     ];
     
+    //Starts the prompt with the above questions and waits for the user to answer
     inquirer.prompt(questions).then(answers => {
         const { text, colour, shape, textColour } = answers;
     
@@ -58,7 +63,9 @@ const questions = [
                 shapeObj = new Square(colour);
                 break;
         }
-    
+
+        //Generates SVG string
         const svgString = svgTemplate(shapeObj, text, textColour);
+        //Writes the SVG string to a new file named logo.svg
         fs.writeFileSync('logo.svg', svgString);
     });
