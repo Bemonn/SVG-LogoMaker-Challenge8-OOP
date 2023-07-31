@@ -14,6 +14,12 @@ const questions = [
       type: 'input',
       name: 'text',
       message: 'Enter up to 3 characters:',
+      validate: function(value) {
+        if (value.length >= 1 && value.length <= 3) {
+          return true;
+        }
+        return 'Please enter 1 to 3 characters.';
+      }
     },
     {
       type: 'input',
